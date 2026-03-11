@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quirós Fotógrafos | Fotografía Profesional</title>
+    <meta name="description" content="Estudio de fotografía profesional especializado en bodas, comuniones, retratos, newborn y fotografía empresarial. Más de 260 reseñas de 5 estrellas en Google.">
+    <meta property="og:title" content="Quirós Fotógrafos | Fotografía Profesional">
+    <meta property="og:description" content="Capturamos momentos únicos con alma y emoción. Especialistas en bodas, comuniones, retratos y recién nacidos.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ============ LOADER ============ -->
+    <div class="page-loader" id="page-loader">
+        <div class="loader-inner">
+            <span class="loader-logo">QF</span>
+            <div class="loader-bar"><div class="loader-fill"></div></div>
+        </div>
+    </div>
+
+    <!-- ============ HEADER ============ -->
+    <header class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="#inicio" class="logo">
+                <span class="logo-main">Quirós</span>
+                <span class="logo-sub">Fotógrafos</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li class="has-dropdown">
+                        <a href="#portafolio" class="nav-link">Portafolio <ion-icon name="chevron-down-outline"></ion-icon></a>
+                        <ul class="dropdown">
+                            <li><a href="#bodas">Bodas</a></li>
+                            <li><a href="#retratos">Retratos</a></li>
+                            <li><a href="#newborn">Recién Nacidos</a></li>
+                            <li><a href="#comuniones">Comuniones</a></li>
+                            <li><a href="#familias">Familias</a></li>
+                            <li><a href="#empresas">Empresas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#sobre-mi" class="nav-link">Nosotros</a></li>
+                    <li><a href="#reviews" class="nav-link">Opiniones</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+                <a href="#contacto" class="btn btn-primary nav-cta">Reservar Sesión</a>
+            </nav>
+
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ============ HERO SLIDER ============ -->
+        <section class="hero" id="inicio">
+            <div class="hero-slides">
+                <div class="slide active" style="--bg: url('assets/gallery_wedding_bride.png')">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <span class="slide-tag">Bodas</span>
+                        <h1>Momentos que <em>duran para siempre</em></h1>
+                        <p>Reportajes íntimos y elegantes que capturan la esencia de vuestro día</p>
+                        <a href="#bodas" class="btn btn-primary">Ver Reportajes</a>
+                    </div>
+                </div>
+                <div class="slide" style="--bg: url('assets/gallery_portrait.png')">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <span class="slide-tag">Retratos</span>
+                        <h1>Tu historia, <em>contada con luz</em></h1>
+                        <p>Retratos naturales y emocionales que reflejan quién eres de verdad</p>
+                        <a href="#retratos" class="btn btn-primary">Ver Retratos</a>
+                    </div>
+                </div>
+                <div class="slide" style="--bg: url('assets/gallery_newborn.png')">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <span class="slide-tag">Newborn</span>
+                        <h1>Pequeños grandes <em>milagros</em></h1>
+                        <p>Sesiones delicadas para recién nacidos en un ambiente cálido y seguro</p>
+                        <a href="#newborn" class="btn btn-primary">Ver Sesiones</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider controls -->
+            <button class="slide-arrow slide-prev" id="slide-prev" aria-label="Anterior">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </button>
+            <button class="slide-arrow slide-next" id="slide-next" aria-label="Siguiente">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+            </button>
+            <div class="slide-dots" id="slide-dots">
+                <button class="dot active" aria-label="Slide 1"></button>
+                <button class="dot" aria-label="Slide 2"></button>
+                <button class="dot" aria-label="Slide 3"></button>
+            </div>
+
+            <!-- Stats strip -->
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-num">+800</span>
+                    <span class="stat-label">Sesiones realizadas</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">4.7 ★</span>
+                    <span class="stat-label">Media en Google</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">262</span>
+                    <span class="stat-label">Reseñas verificadas</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">15+</span>
+                    <span class="stat-label">Años de experiencia</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SERVICE CATEGORIES ============ -->
+        <section class="services-section" id="portafolio">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="overline">Nuestros servicios</span>
+                    <h2>¿Qué tipo de sesión buscas?</h2>
+                    <p>Cada historia merece ser contada de una manera única. Elige la categoría que se adapta a tu momento.</p>
+                </div>
+
+                <div class="services-grid">
+                    <a href="#bodas" class="service-card" id="bodas">
+                        <div class="service-img-wrap">
+                            <img src="assets/hero_wedding.png" alt="Fotografía de bodas">
+                            <div class="service-overlay"></div>
+                        </div>
+                        <div class="service-info">
+                            <ion-icon name="heart-outline"></ion-icon>
+                            <h3>Bodas</h3>
+                            <p>Reportajes completos del día más especial. Desde el getting ready hasta el último baile.</p>
+                            <span class="service-link">Explorar <ion-icon name="arrow-forward-outline"></ion-icon></span>
+                        </div>
+                    </a>
+
+                    <a href="#retratos" class="service-card" id="retratos">
+                        <div class="service-img-wrap">
+                            <img src="assets/gallery_portrait.png" alt="Fotografía de retratos">
+                            <div class="service-overlay"></div>
+                        </div>
+                        <div class="service-info">
+                            <ion-icon name="person-outline"></ion-icon>
+                            <h3>Retratos</h3>
+                            <p>Sesiones personales y de pareja que capturan tu personalidad en un entorno natural.</p>
+                            <span class="service-link">Explorar <ion-icon name="arrow-forward-outline"></ion-icon></span>
+                        </div>
+                    </a>
+
+                    <a href="#newborn" class="service-card" id="newborn">
+                        <div class="service-img-wrap">
+                            <img src="assets/gallery_newborn.png" alt="Fotografía newborn">
+                            <div class="service-overlay"></div>
+                        </div>
+                        <div class="service-info">
+                            <ion-icon name="rose-outline"></ion-icon>
+                            <h3>Recién Nacidos</h3>
+                            <p>Sesiones delicadas para bebés y familias en un ambiente totalmente seguro y cálido.</p>
+                            <span class="service-link">Explorar <ion-icon name="arrow-forward-outline"></ion-icon></span>
+                        </div>
+                    </a>
+
+                    <a href="#comuniones" class="service-card" id="comuniones">
+                        <div class="service-img-wrap">
+                            <img src="assets/gallery_communion.png" alt="Fotografía de comuniones">
+                            <div class="service-overlay"></div>
+                        </div>
+                        <div class="service-info">
+                            <ion-icon name="sparkles-outline"></ion-icon>
+                            <h3>Comuniones</h3>
+                            <p>Fotos llenas de ilusión y emoción en el día grande de los más pequeños de la casa.</p>
+                            <span class="service-link">Explorar <ion-icon name="arrow-forward-outline"></ion-icon></span>
+                        </div>
+                    </a>
+
+                    <a href="#familias" class="service-card" id="familias">
+                        <div class="service-img-wrap">
+                            <img src="assets/gallery_lifestyle.png" alt="Fotografía de familias">
+                            <div class="service-overlay"></div>
+                        </div>
+                        <div class="service-info">
+                            <ion-icon name="people-outline"></ion-icon>
+                            <h3>Familias &amp; Lifestyle</h3>
+                            <p>Momentos cotidianos transformados en recuerdos eternos para toda la familia.</p>
+                            <span class="service-link">Explorar <ion-icon name="arrow-forward-outline"></ion-icon></span>
+                        </div>
+                    </a>
+
+                    <a href="#empresas" class="service-card" id="empresas">
+                        <div class="service-img-wrap">
+                            <img src="assets/gallery_editorial.png" alt="Fotografía empresarial">
+                            <div class="service-overlay"></div>
+                        </div>
+                        <div class="service-info">
+                            <ion-icon name="briefcase-outline"></ion-icon>
+                            <h3>Empresas &amp; Editorial</h3>
+                            <p>Imagen corporativa, headshots profesionales y reportajes de producto o equipo.</p>
+                            <span class="service-link">Explorar <ion-icon name="arrow-forward-outline"></ion-icon></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ PORTFOLIO MASONRY GALLERY ============ -->
+        <section class="gallery-section" id="galeria">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="overline">Portafolio completo</span>
+                    <h2>Una selección de nuestro trabajo</h2>
+                </div>
+
+                <!-- Filter Tabs -->
+                <div class="gallery-filters" id="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="boda">Bodas</button>
+                    <button class="filter-btn" data-filter="retrato">Retratos</button>
+                    <button class="filter-btn" data-filter="newborn">Newborn</button>
+                    <button class="filter-btn" data-filter="lifestyle">Lifestyle</button>
+                </div>
+
+                <div class="masonry-grid" id="masonry-grid">
+                    <div class="grid-item" data-cat="boda">
+                        <img src="assets/hero_wedding.png" alt="Pareja de novios el día de su boda" loading="lazy">
+                        <div class="grid-overlay"><span>Bodas</span></div>
+                    </div>
+                    <div class="grid-item" data-cat="retrato">
+                        <img src="assets/gallery_portrait.png" alt="Retrato natural femenino" loading="lazy">
+                        <div class="grid-overlay"><span>Retratos</span></div>
+                    </div>
+                    <div class="grid-item" data-cat="boda">
+                        <img src="assets/gallery_wedding_rings.png" alt="Detalle de anillos de boda" loading="lazy">
+                        <div class="grid-overlay"><span>Bodas · Detalle</span></div>
+                    </div>
+                    <div class="grid-item" data-cat="newborn">
+                        <img src="assets/gallery_newborn.png" alt="Sesión newborn recién nacido" loading="lazy">
+                        <div class="grid-overlay"><span>Newborn</span></div>
+                    </div>
+                    <div class="grid-item" data-cat="boda">
+                        <img src="assets/gallery_wedding_bride.png" alt="Retrato nupcial de novia" loading="lazy">
+                        <div class="grid-overlay"><span>Bodas · Novia</span></div>
+                    </div>
+                    <div class="grid-item" data-cat="lifestyle">
+                        <img src="assets/gallery_lifestyle.png" alt="Lifestyle amigos al atardecer" loading="lazy">
+                        <div class="grid-overlay"><span>Lifestyle</span></div>
+                    </div>
+                    <div class="grid-item" data-cat="boda">
+                        <img src="assets/gallery_couple.png" alt="Pareja preboda en playa" loading="lazy">
+                        <div class="grid-overlay"><span>Preboda</span></div>
+                    </div>
+                    <div class="grid-item" data-cat="retrato">
+                        <img src="assets/gallery_editorial.png" alt="Retrato editorial masculino" loading="lazy">
+                        <div class="grid-overlay"><span>Editorial</span></div>
+                    </div>
+                    <div class="grid-item" data-cat="lifestyle">
+                        <img src="assets/gallery_communion.png" alt="Comunión en iglesia" loading="lazy">
+                        <div class="grid-overlay"><span>Comunión</span></div>
+                    </div>
+                    <div class="grid-item" data-cat="boda">
+                        <img src="assets/gallery_wedding_detail.png" alt="Detalle ramo de novia" loading="lazy">
+                        <div class="grid-overlay"><span>Bodas · Detalle</span></div>
+                    </div>
+                </div>
+
+                <div class="gallery-cta">
+                    <a href="#contacto" class="btn btn-outline">Ver portafolio completo</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ ABOUT SECTION ============ -->
+        <section class="about-section" id="sobre-mi">
+            <div class="container about-grid">
+                <div class="about-images">
+                    <div class="about-img-main">
+                        <img src="assets/photographer_portrait.png" alt="Fotógrafa profesional Quirós">
+                    </div>
+                    <div class="about-img-accent">
+                        <img src="assets/gallery_wedding_bride.png" alt="Trabajo en acción">
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="overline">Quiénes somos</span>
+                    <h2>Pasión por la fotografía, amor por las personas</h2>
+                    <p>En <strong>Quirós Fotógrafos</strong> llevamos más de 15 años capturando momentos que merecen ser recordados. Somos un equipo familiar con sede en España, disponibles para viajar donde esté vuestra historia.</p>
+                    <p>Nuestra filosofía es sencilla: crear un ambiente relajado y de confianza para que las emociones fluyan de forma natural. No buscamos poses, buscamos momentos reales.</p>
+                    <div class="about-badges">
+                        <div class="about-badge">
+                            <ion-icon name="ribbon-outline"></ion-icon>
+                            <span>Premiados en Bodas.net</span>
+                        </div>
+                        <div class="about-badge">
+                            <ion-icon name="star-outline"></ion-icon>
+                            <span>4.7★ en Google Maps</span>
+                        </div>
+                        <div class="about-badge">
+                            <ion-icon name="camera-outline"></ion-icon>
+                            <span>Equipo profesional Sony &amp; Canon</span>
+                        </div>
+                    </div>
+                    <a href="#contacto" class="btn btn-primary">Hablemos de tu sesión</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ GOOGLE REVIEWS ============ -->
+        <section class="reviews-section" id="reviews">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="overline">Lo que dicen nuestros clientes</span>
+                    <h2>Opiniones reales de Google</h2>
+                    <div class="google-rating-summary">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png" alt="Google" class="google-logo">
+                        <div class="rating-big">4.7</div>
+                        <div class="stars-row">
+                            <ion-icon name="star" class="star-filled"></ion-icon>
+                            <ion-icon name="star" class="star-filled"></ion-icon>
+                            <ion-icon name="star" class="star-filled"></ion-icon>
+                            <ion-icon name="star" class="star-filled"></ion-icon>
+                            <ion-icon name="star-half" class="star-filled"></ion-icon>
+                        </div>
+                        <span class="review-count">262 reseñas verificadas</span>
+                    </div>
+                </div>
+
+                <div class="reviews-carousel" id="reviews-carousel">
+                    <!-- Review 1 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar" style="background: #4285F4;">MA</div>
+                            <div class="reviewer-info">
+                                <strong>María Alcántara</strong>
+                                <span class="review-date">Hace 2 semanas</span>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png" alt="Google" class="review-google-logo">
+                        </div>
+                        <div class="review-stars">
+                            <ion-icon name="star" class="star-filled"></ion-icon>
+                            <ion-icon name="star" class="star-filled"></ion-icon>
+                            <ion-icon name="star" class="star-filled"></ion-icon>
+                            <ion-icon name="star" class="star-filled"></ion-icon>
+                            <ion-icon name="star" class="star-filled"></ion-icon>
+                        </div>
+                        <p class="review-text">"Contratamos a Quirós Fotógrafos para nuestra boda y el resultado superó todas nuestras expectativas. Tienen un don especial para capturar momentos reales sin que te des cuenta de que hay una cámara. Las fotos son espectaculares."</p>
+                        <div class="review-photos">
+                            <img src="assets/gallery_wedding_rings.png" alt="Foto de reseña">
+                            <img src="assets/hero_wedding.png" alt="Foto de reseña">
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar" style="background: #EA4335;">JL</div>
+                            <div class="reviewer-info">
+                                <strong>José Luis Moreno</strong>
+                                <span class="review-date">Hace 1 mes</span>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png" alt="Google" class="review-google-logo">
+                        </div>
+                        <div class="review-stars">
+                            <ion-icon name="star" class="star-filled"></ion-icon>
+                            <ion-icon name="star" class="star-filled"></ion-icon>
+                            <ion-icon name="star" class="star-filled"></ion-icon>
+                            <ion-icon name="star" class="star-filled"></ion-icon>
+                            <ion-icon name="star" class="star-filled"></ion-icon>
+                        </div>
+                        <p class="review-text">"La sesión de newborn de nuestro bebé fue una experiencia increíble. El equipo transmitió mucha tranquilidad y el bebé estuvo relajado todo el tiempo. Las fotos son una obra de arte, las tenemos enmarcadas por toda la casa."</p>
+                        <div class="review-photos">
+                            <img src="assets/gallery_newborn.png" alt="Foto de reseña">
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar" style="background: #34A853;">CS</div>
+                            <div class="reviewer-info">
+                                <strong>Carmen Suárez</strong>
+                                <span class="review-date">Hace 3 semanas</span>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png" alt="Google" class="review-google-logo">
+                        </div>
+                        <div class="review-stars">
+                            <ion-icon name="star" class="star-filled"></ion-icon>
+                            <ion-icon name="star" class="star-filled"></ion-icon>
+                            <ion-icon name="star" class="star-filled"></ion-icon>
+                            <ion-icon name="star" class="star-filled"></ion-icon>
+                            <ion-icon name="star" class="star-filled"></ion-icon>
+                        </div>
+                        <p class="review-text">"Contratamos la sesión de comunión de nuestra hija y quedamos maravillados. Muy pacientes con los niños, saben exactamente cómo conseguir las mejores expresiones naturales. 100% recomendados sin dudarlo."</p>
+                        <div class="review-photos">
+                            <img src="assets/gallery_communion.png" alt="Foto de reseña">
+                        </div>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar" style="background: #FBBC04; color: #333;">PR</div>
+                            <div class="reviewer-info">
+                                <strong>Pablo Rodríguez</strong>
+                                <span class="review-date">Hace 2 meses</span>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png" alt="Google" class="review-google-logo">
+                        </div>
+                        <div class="review-stars">
+                            <ion-icon name="star" class="star-filled"></ion-icon>
+                            <ion-icon name="star" class="star-filled"></ion-icon>
+                            <ion-icon name="star" class="star-filled"></ion-icon>
+                            <ion-icon name="star" class="star-filled"></ion-icon>
+                            <ion-icon name="star" class="star-filled"></ion-icon>
+                        </div>
+                        <p class="review-text">"Profesionales de primer nivel. Desde la primera llamada hasta la entrega final, todo fue perfecto. Las fotos de nuestra preboda en la playa son simplemente mágicas. Repetiríamos sin pensarlo."</p>
+                        <div class="review-photos">
+                            <img src="assets/gallery_couple.png" alt="Foto de reseña">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reviews-nav">
+                    <button class="rev-arrow rev-prev" id="rev-prev"><ion-icon name="arrow-back-outline"></ion-icon></button>
+                    <button class="rev-arrow rev-next" id="rev-next"><ion-icon name="arrow-forward-outline"></ion-icon></button>
+                </div>
+
+                <div class="reviews-cta">
+                    <a href="https://share.google/3uiYbWqWM8owN03xA" target="_blank" rel="noopener" class="btn btn-google">
+                        <ion-icon name="star"></ion-icon> Ver todas las reseñas en Google
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ INSTAGRAM FEED ============ -->
+        <section class="instagram-section" id="instagram">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="overline">Síguenos en redes</span>
+                    <h2>Nuestro feed de Instagram</h2>
+                    <p>Cada semana compartimos nueva obra de los estudios y el trabajo en campo.</p>
+                </div>
+            </div>
+
+            <div class="instagram-grid">
+                <a href="https://www.instagram.com/quirosfoto/" target="_blank" rel="noopener" class="insta-item">
+                    <img src="assets/hero_wedding.png" alt="Fotografía de boda en Instagram" loading="lazy">
+                    <div class="insta-overlay">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/quirosfoto/" target="_blank" rel="noopener" class="insta-item">
+                    <img src="assets/gallery_portrait.png" alt="Retrato en Instagram" loading="lazy">
+                    <div class="insta-overlay">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/quirosfoto/" target="_blank" rel="noopener" class="insta-item">
+                    <img src="assets/gallery_newborn.png" alt="Newborn en Instagram" loading="lazy">
+                    <div class="insta-overlay">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/quirosfoto/" target="_blank" rel="noopener" class="insta-item">
+                    <img src="assets/gallery_wedding_bride.png" alt="Novia en Instagram" loading="lazy">
+                    <div class="insta-overlay">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/quirosfoto/" target="_blank" rel="noopener" class="insta-item">
+                    <img src="assets/gallery_couple.png" alt="Pareja en Instagram" loading="lazy">
+                    <div class="insta-overlay">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/quirosfoto/" target="_blank" rel="noopener" class="insta-item">
+                    <img src="assets/gallery_wedding_rings.png" alt="Detalle boda en Instagram" loading="lazy">
+                    <div class="insta-overlay">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/quirosfoto/" target="_blank" rel="noopener" class="insta-item">
+                    <img src="assets/gallery_communion.png" alt="Comunión en Instagram" loading="lazy">
+                    <div class="insta-overlay">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/quirosfoto/" target="_blank" rel="noopener" class="insta-item">
+                    <img src="assets/gallery_lifestyle.png" alt="Lifestyle en Instagram" loading="lazy">
+                    <div class="insta-overlay">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </div>
+                </a>
+            </div>
+
+            <div class="instagram-follow">
+                <a href="https://www.instagram.com/quirosfoto/" target="_blank" rel="noopener" class="btn btn-instagram">
+                    <ion-icon name="logo-instagram"></ion-icon> Seguirnos en Instagram <span>@quirosfoto</span>
+                </a>
+                <a href="https://www.facebook.com/quirosfotografos/" target="_blank" rel="noopener" class="btn btn-facebook">
+                    <ion-icon name="logo-facebook"></ion-icon> Facebook
+                </a>
+            </div>
+        </section>
+
+        <!-- ============ CONTACT SECTION ============ -->
+        <section class="contact-section" id="contacto">
+            <div class="container contact-grid">
+                <div class="contact-info">
+                    <span class="overline">Hablemos</span>
+                    <h2>Reserva tu sesión</h2>
+                    <p>Cuéntanos qué tipo de sesión tienes en mente y nos pondremos en contacto contigo para diseñar juntos el reportaje perfecto.</p>
+
+                    <div class="contact-details">
+                        <a href="tel:+34607024127" class="contact-detail">
+                            <div class="contact-icon"><ion-icon name="call-outline"></ion-icon></div>
+                            <div>
+                                <strong>Teléfono</strong>
+                                <span>607 024 127</span>
+                            </div>
+                        </a>
+                        <a href="mailto:info@quirosfotografos.com" class="contact-detail">
+                            <div class="contact-icon"><ion-icon name="mail-outline"></ion-icon></div>
+                            <div>
+                                <strong>Email</strong>
+                                <span>info@quirosfotografos.com</span>
+                            </div>
+                        </a>
+                        <div class="contact-detail">
+                            <div class="contact-icon"><ion-icon name="location-outline"></ion-icon></div>
+                            <div>
+                                <strong>Ubicación</strong>
+                                <span>C/Francisco Vitoria, 10<br>47195, Arroyo de la Encomienda, Valladolid</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <a href="https://www.instagram.com/quirosfoto/" target="_blank" class="social-btn"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="https://www.facebook.com/quirosfotografos/" target="_blank" class="social-btn"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="https://share.google/3uiYbWqWM8owN03xA" target="_blank" class="social-btn"><ion-icon name="star-outline"></ion-icon></a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contact-form" onsubmit="handleFormSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="607 024 127">
+                    </div>
+                    <div class="form-group">
+                        <label for="servicio">Tipo de sesión</label>
+                        <select id="servicio" name="servicio">
+                            <option value="">Selecciona un servicio</option>
+                            <option value="boda">Boda</option>
+                            <option value="retrato">Retrato Personal</option>
+                            <option value="newborn">Recién Nacido (Newborn)</option>
+                            <option value="comunion">Comunión</option>
+                            <option value="familia">Familia &amp; Lifestyle</option>
+                            <option value="empresa">Fotografía Empresarial</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Cuéntanos tu historia</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿Cuándo es la fecha? ¿Qué tipo de ambiente buscas? Cuéntanos todo..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full" id="form-submit">
+                        Enviar Solicitud <ion-icon name="send-outline"></ion-icon>
+                    </button>
+                    <div class="form-success" id="form-success" style="display:none">
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                        <span>¡Mensaje enviado! Te contestaremos en menos de 24h.</span>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+        <div class="footer-top-bar"></div>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo footer-logo">
+                    <span class="logo-main">Quirós</span>
+                    <span class="logo-sub">Fotógrafos</span>
+                </div>
+                <p>Capturamos emociones reales desde hace más de 15 años. Especialistas en bodas, retratos y newborn en España.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/quirosfoto/" target="_blank" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://www.facebook.com/quirosfotografos/" target="_blank" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://share.google/3uiYbWqWM8owN03xA" target="_blank" aria-label="Google Reviews"><ion-icon name="star-outline"></ion-icon></a>
+                </div>
+            </div>
+
+            <div class="footer-links-col">
+                <h4>Servicios</h4>
+                <ul>
+                    <li><a href="#bodas">Bodas</a></li>
+                    <li><a href="#retratos">Retratos</a></li>
+                    <li><a href="#newborn">Recién Nacidos</a></li>
+                    <li><a href="#comuniones">Comuniones</a></li>
+                    <li><a href="#familias">Familias</a></li>
+                    <li><a href="#empresas">Empresas</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-col">
+                <h4>Información</h4>
+                <ul>
+                    <li><a href="#sobre-mi">Quiénes somos</a></li>
+                    <li><a href="#reviews">Opiniones Google</a></li>
+                    <li><a href="#instagram">Instagram Feed</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4>Boletín de novedades</h4>
+                <p>Recibe inspiración, fechas de mini-sesiones y novedades del estudio.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('.nl-success').style.display='flex'">
+                    <input type="email" placeholder="tu@email.com" required aria-label="Email para boletín">
+                    <button type="submit" aria-label="Suscribirse"><ion-icon name="arrow-forward-outline"></ion-icon></button>
+                </form>
+                <div class="nl-success" style="display:none">
+                    <ion-icon name="checkmark-circle-outline"></ion-icon> ¡Suscrito correctamente!
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Quirós Fotógrafos · Todos los derechos reservados</p>
+            <div class="footer-legal">
+                <a href="#">Aviso Legal</a>
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
